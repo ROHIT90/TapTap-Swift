@@ -52,6 +52,9 @@ class ViewController: UIViewController,UITextFieldDelegate {
     {
         currentTaps++
         updateTapLabel()
+        if isGameOver() {
+            restartGame()
+        }
     }
     
     func updateTapLabel()
@@ -104,13 +107,10 @@ class ViewController: UIViewController,UITextFieldDelegate {
         doneToolbar.sizeToFit()
         
         self.howMnayTapsTextFiewld.inputAccessoryView = doneToolbar
-        self.howMnayTapsTextFiewld.inputAccessoryView = doneToolbar
-        
     }
     
     func doneButtonAction()
     {
-        self.howMnayTapsTextFiewld.resignFirstResponder()
         self.howMnayTapsTextFiewld.resignFirstResponder()
     }
 }
